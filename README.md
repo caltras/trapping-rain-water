@@ -92,3 +92,30 @@ This will run both the service logic tests and the REST API integration tests.
 ## Additional Resources
 
 - [Quarkus Documentation](https://quarkus.io/guides/)
+
+## Running with Docker
+
+You can run the application in a Docker container using either JVM or native mode. The project provides multiple Dockerfiles for different build types.
+
+### 1. Build the Application
+
+**For JVM mode:**
+```sh
+./mvnw package
+```
+
+### 2. Build the Docker Image
+
+**JVM mode:**
+```sh
+docker build -f src/main/docker/Dockerfile.jvm -t quarkus/elevation-jvm .
+```
+
+### 3. Run the Docker Container
+
+**JVM mode:**
+```sh
+docker run -i --rm -p 8080:8080 quarkus/elevation-jvm
+```
+
+The API will be available at [http://localhost:8080/water-trap](http://localhost:8080/water-trap).
