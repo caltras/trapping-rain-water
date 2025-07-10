@@ -54,6 +54,8 @@ The API will be available at [http://localhost:8080/water-trap](http://localhost
   - Response: Integer (total trapped water)
 
 
+![alt text](./explanation.png)
+
 ## Packaging the Application
 
 To build a runnable JAR:
