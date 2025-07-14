@@ -89,6 +89,24 @@ To execute all unit and integration tests:
 
 This will run both the service logic tests and the REST API integration tests.
 
+## Code Coverage Report
+
+This project uses JaCoCo to generate code coverage reports for the tests.
+
+To generate the coverage report, run:
+
+```shell
+./mvnw clean test
+```
+
+After the tests complete, open the following file in your browser to view the detailed HTML coverage report:
+
+```
+target/site/jacoco/index.html
+```
+
+This report shows which parts of the code are covered by tests and helps identify untested code.
+
 ## Running with Docker
 
 You can run the application in a Docker container using either JVM or native mode. The project provides multiple Dockerfiles for different build types.
